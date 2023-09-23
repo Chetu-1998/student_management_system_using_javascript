@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="student.css">
+    <script src="student.js"></script>
+</head>
+<body style="background-color:white">
+    <center><h2>Simple student form</h2></center>
+    <table>
+        <tr> 
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name: </label><br>
+                        <label class="validation-error hide" id="fullNameValidationError"></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required><br><br>
+                    </div>
+                    <div>
+                        <label>Roll No: </label><br>
+                        <label class="validation-error hide" id="rollNoValidationError"></label>
+                        <input type="number" id="rollNo" name="rollNo" placeholder="Enter Roll No" required><br><br>
+                    </div>
+                    <div>
+                        <label>Stream: </label><br>
+                        <label class="validation-error hide" id="StreamValidationError"></label>
+                        <input type="checkbox" name="Stream" value="BE IT" >BE IT<br>
+                        <input type="checkbox" name="Stream" value="BE COMP" >BE COMP<br>
+                        <input type="checkbox" name="Stream" value="BE MECH" >BE MECH<br>
+                        <input type="checkbox" name="Stream" value="BE ENTC" >BE ENTC<br><br>
+                    </div>
+                    <div>
+                        <label>Total Subject: </label><br>
+                        <label class="validation-error hide" id="subjectValidationError"></label>
+                        <input type="number" id="subject" name="subject" placeholder="Enter total subject" required><br><br>
+                    </div>
+                    <div>    
+                        <label>Year: </label><br>
+                        <label class="validation-error hide" id="yearValidationError"></label>                        
+                        <input type="radio"  name="year" value="1st year" >1st year<br>
+                        <input type="radio" name="year" value="2nd year" >2nd year<br>
+                        <input type="radio"  name="year" value="3rd year" >3rd year<br>
+                        <input type="radio" name="year" value="4th year" >4th year<br><br>
+                    </div>
+                    <div>    
+                        <label>Contact No: </label><br>
+                        <label class="validation-error hide" id="contactValidationError"></label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter Contact number" pattern="[1-9]{1}[0-9]{9}" required><br><br>
+                    </div>
+                    <div>                   
+                        <label>Age: </label><br>
+                        <label class="validation-error hide" id="AgeValidationError"></label>
+                        <input type="number" id="Age" name="Age" placeholder="Enter Age" required><br><br>
+                    </div>
+                    <div>
+                        <label>Email: </label><br>
+                        <label class="validation-error hide" id="emailValidationError"></label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required><br><br>
+                    </div>
+                    <div>
+                        <label>Gender: </label><br>
+                        <label class="validation-error hide" id="genderValidationError"></label>
+                        <input type="radio" name="gender" value="Male" >Male
+                        <input type="radio" name="gender" value="Female">Female<br><br>
+                    </div> 
+                    <div class="form-actions-buttons">
+                        <input type="submit" value="Submit">
+                    </div>   
+                </form>
+            </td>        
+            <td>
+                <table class="list" id="stdlist" style="background-color: red;">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Roll No</th>
+                            <th>Stream</th>
+                            <th>Total Subject</th>
+                            <th>Year</th>
+                            <th>Contact No</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
